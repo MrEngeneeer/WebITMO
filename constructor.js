@@ -95,6 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
         urgentNotImportant: document.getElementById('urgentNotImportant').value,
         notUrgentNotImportant: document.getElementById('notUrgentNotImportant').value,
     };
-    console.log(data)
     generateTable(data)
 });
