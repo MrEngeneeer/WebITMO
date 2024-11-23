@@ -24,26 +24,53 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const generateTable = (data) => {
-        resultContainer.innerHTML = `
-      <div class="matrix">
-        <div class="matrix__item matrix__item_urgent-important">
-          <h3>Срочное и важное</h3>
-          <ul>${data.urgentImportant.split('\n').map(item => `<li>${item}</li>`).join('')}</ul>
-        </div>
-        <div class="matrix__item matrix__item_not-urgent-important">
-          <h3>Не срочное, но важное</h3>
-          <ul>${data.notUrgentImportant.split('\n').map(item => `<li>${item}</li>`).join('')}</ul>
-        </div>
-        <div class="matrix__item matrix__item_urgent-not-important">
-          <h3>Срочное, но не важное</h3>
-          <ul>${data.urgentNotImportant.split('\n').map(item => `<li>${item}</li>`).join('')}</ul>
-        </div>
-        <div class="matrix__item matrix__item_not-urgent-not-important">
-          <h3>Не срочное и не важное</h3>
-          <ul>${data.notUrgentNotImportant.split('\n').map(item => `<li>${item}</li>`).join('')}</ul>
-        </div>
-      </div>
-    `;
+        const matrixContainer = document.createElement('div');
+        matrixContainer.className = 'matrix';
+
+        function createMatrixSection(title, items, className) {
+            const section = document.createElement('div');
+            section.className = `matrix__item ${className}`;
+
+            const heading = document.createElement('h3');
+            heading.textContent = title;
+
+            const list = document.createElement('ul');
+            items.split('\n').forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                list.appendChild(listItem);
+            });
+
+            section.appendChild(heading);
+            section.appendChild(list);
+
+            return section;
+        }
+
+        matrixContainer.appendChild(createMatrixSection(
+            'Срочное и важное',
+            data.urgentImportant,
+            'matrix__item_urgent-important'
+        ));
+        matrixContainer.appendChild(createMatrixSection(
+            'Не срочное, но важное',
+            data.notUrgentImportant,
+            'matrix__item_not-urgent-important'
+        ));
+        matrixContainer.appendChild(createMatrixSection(
+            'Срочное, но не важное',
+            data.urgentNotImportant,
+            'matrix__item_urgent-not-important'
+        ));
+        matrixContainer.appendChild(createMatrixSection(
+            'Не срочное и не важное',
+            data.notUrgentNotImportant,
+            'matrix__item_not-urgent-not-important'
+        ));
+
+        resultContainer.textContent = '';
+        resultContainer.appendChild(matrixContainer);
+
     };
 
     form.addEventListener('submit', (event) => {
