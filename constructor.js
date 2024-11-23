@@ -62,4 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     populateFields();
+    const data = {
+        urgentImportant: document.getElementById('urgentImportant').value,
+        notUrgentImportant: document.getElementById('notUrgentImportant').value,
+        urgentNotImportant: document.getElementById('urgentNotImportant').value,
+        notUrgentNotImportant: document.getElementById('notUrgentNotImportant').value,
+    };
+    console.log(data)
+    generateTable(data)
 });
