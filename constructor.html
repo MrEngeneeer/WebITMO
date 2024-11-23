@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резюме - Иван Ганецкий</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="constructor.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+<header>
+  <h1>Конструктор таблицы</h1>
+  <button class="menu-toggle">☰</button>
+  <nav class="navigation">
+    <ul>
+      <li><a href="index.html">Обо мне</a></li>
+      <li><a href="education.html">Образование</a></li>
+      <li><a href="skills.html">Навыки</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="constructor.html">Конструктор</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Создайте свою таблицу Эйзенхауэра</h2>
+    <form id="tableForm">
+      <label for="urgentImportant">Срочное и важное:</label><br>
+      <textarea id="urgentImportant" rows="4"></textarea><br><br>
+
+      <label for="notUrgentImportant">Не срочное, но важное:</label><br>
+      <textarea id="notUrgentImportant" rows="4"></textarea><br><br>
+
+      <label for="urgentNotImportant">Срочное, но не важное:</label><br>
+      <textarea id="urgentNotImportant" rows="4"></textarea><br><br>
+
+      <label for="notUrgentNotImportant">Не срочное и не важное:</label><br>
+      <textarea id="notUrgentNotImportant" rows="4"></textarea><br><br>
+
+      <button type="submit">Создать таблицу</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Результат</h2>
+    <div id="resultContainer"></div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2024 Все права защищены.</p>
+</footer>
+</body>
+</html>
