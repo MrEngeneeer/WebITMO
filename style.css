@@ -274,12 +274,42 @@ form button:active {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+#comment-preloader {
+    display: none;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#comment-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.tenor-gif-embed {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+}
 
 
 @media (max-width: 768px) {
 
     .matrix {
-        grid-template-columns: 1fr; /* По одной колонке на маленьких экранах */
+        grid-template-columns: 1fr;
     }
 
     nav ul {
