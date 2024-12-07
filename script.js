@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     li.appendChild(name);
                     li.appendChild(email);
-                    li.appendChild(document.createElement('br')); // Перенос строки
+                    li.appendChild(document.createElement('br'));
                     li.appendChild(body);
                     commentList.appendChild(li);
                 });
