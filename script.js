@@ -26,6 +26,9 @@
 
 })();
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const commentPreloader = document.getElementById('comment-preloader');
     const commentList = document.getElementById('comment-list');
@@ -75,6 +78,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     loadComments();
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
 });
 
 

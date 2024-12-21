@@ -86,6 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         saveToStorage(data);
 
         generateTable(data);
+
+        Swal.fire({
+            title: 'Готово!',
+            text: 'Теперь тут находится табличка, в которую вы вложили частичку своей души! ',
+            icon: 'info',
+            confirmButtonText: 'ОК',
+        })
     });
 
     populateFields();

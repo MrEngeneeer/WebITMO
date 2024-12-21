@@ -8,6 +8,8 @@
   <title>Резюме - Иван Ганецкий</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 <header>
@@ -27,7 +29,15 @@
 <main>
   <section id="about" class="clearfix">
     <h2>Обо мне</h2>
-    <img src="profile.jpg" alt="Фото Ивана Ганецкого">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="profile.jpg" alt="Фото 1"></div>
+        <div class="swiper-slide"><img src="profile2.jpg" alt="Фото 2"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
     <p>Я молодой студент, стремящийся начать свою карьеру. Моими главными чертами являются страсть к технологиям и постоянное желание учиться. Обладаю прекрасными аналитическими способностями, что позволяет мне быстро разбираться в новых задачах и находить эффективные и необычные решения.</p>
     <p>Готов к активной работе в команде, а также к самостоятельному исследованию и разработке проектов. Моя цель — не только приобрести ценный опыт в индустрии разработки ПО, но и внести свой вклад в развитие инновационных технологий.</p>
   </section>
