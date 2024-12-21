@@ -78,19 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     loadComments();
+    //Swiper для того, чтобы переключать фотки
     const swiper = new Swiper('.swiper-container', {
-        loop: true,
+        loop: true, // Бесконечная прокрутка
         pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+            el: '.swiper-pagination', // Какой элемент участвует в пагинации
+            clickable: true, // Возможность клика по пагинации
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next', // Кнопка "вперед"
+            prevEl: '.swiper-button-prev', // Кнопка "назад"
         },
         autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 7000, // Автопрокрутка каждые 3 секунды
+            disableOnInteraction: false, // Не отключать автопрокрутку при взаимодействии
         },
     });
 });

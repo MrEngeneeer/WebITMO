@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
         generateTable(data);
 
         Swal.fire({
-            title: 'Готово!',
-            text: 'Теперь тут находится табличка, в которую вы вложили частичку своей души! ',
-            icon: 'info',
-            confirmButtonText: 'ОК',
+            title: 'Готово!', // Заголовок
+            text: 'Теперь тут находится табличка, в которую вы вложили частичку своей души! ', // Текст окна
+            icon: 'info', // Иконка
+            confirmButtonText: 'ОК', // Текст на кнопке
         })
     });
 
